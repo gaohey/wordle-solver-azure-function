@@ -101,7 +101,7 @@ class Wordle():
         self.allWords = WORDSERIES
         self.answer = self.allWords.words.sample(1).values[0] ## will be replaced 
         self.choiceSpace = self.allWords
-        self.hint = "slate"
+        self.hint = "raise"
 
         self.mode = "WORDLE" ## "SOLVER" 
     
@@ -110,7 +110,7 @@ class Wordle():
         self.guess = []
         self.scores = []
         self.choiceSpace = self.allWords
-        self.hint = "slate"
+        self.hint = "raise"
         self.mode = mode ## "SOLVER" 
 
 
@@ -160,7 +160,7 @@ class Wordle():
         if len ( self.guess ) == 0:
             return self.hint 
 
-        elif sum( [int(i) for i in self.scores[-1] ]) >=6 :
+        elif sum( [int(i) for i in self.scores[-1] ]) >=5 :
             self.hint = bestSolver( self.allWords, self.choiceSpace  )
         else:
             self.hint = genBestGuess( self.choiceSpace  )
