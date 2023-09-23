@@ -101,7 +101,7 @@ class Wordle():
         self.allWords = WORDSERIES
         self.answer = self.allWords.words.sample(1).values[0] ## will be replaced 
         self.choiceSpace = self.allWords
-        self.hint = "raise"
+        self.hint = "slate"
 
         self.mode = "WORDLE" ## "SOLVER" 
     
@@ -110,7 +110,7 @@ class Wordle():
         self.guess = []
         self.scores = []
         self.choiceSpace = self.allWords
-        self.hint = "raise"
+        self.hint = "slate"
         self.mode = mode ## "SOLVER" 
 
 
